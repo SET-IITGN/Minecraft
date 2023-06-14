@@ -6,10 +6,10 @@ import szz
 import checkout
 import diff
 import AST
-import pandas as pd
 import shutil
+import bug_type
 
-
+commit_count = 0
 projects = pd.read_csv(sys.argv[1]) #read csv file of projects
 
 def get_project_name():
@@ -51,11 +51,13 @@ for i in range(last_project_index+1,len(projects)):
         modified_files = szz.get_szz(repo_path, commits[0]) #get modified files of current commit
         commits.append(modified_files)
     for commit, prev, modified_files in commits_map:
+        commit_count += 1
         print("Processing for commmit: ", commit.hash)
         print("Corresponding commit msg: ", commit.msg.split('\n')[0]) 
         checkout.checkout(repo_path, commit.hash, prev.hash)
         for file_path in modified_files:
             diff_text = diff.git_diff(repo_path, prev.hash, commit.hash, file_path)
+            bug_type = test.predict(diff_text)
             pairs = diff.get_pairs(diff_text)
             for deletion, addition in pairs:
                 line_no_fixed = int(addition.split(',')[0])
@@ -69,7 +71,7 @@ for i in range(last_project_index+1,len(projects)):
                 buggy_code = AST.extract_function_by_line(file_path_prev, line_no_buggy)
                 # print(buggy_code)
                 location = 'Before: ' + deletion + '\n' +'After: ' + addition
-                new_row = pd.DataFrame([[buggy_code, fixed_code, location, commit.msg.split('\n')[0],
+                new_row = pd.DataFrame([[buggy_code, fixed_code, location, bug_type,
                                          commit.msg.split('\n')[0], project_url, file_path]], columns = df.columns)
                 df = pd.concat([df, new_row], ignore_index=True)
                 df.to_csv('./dataset.csv', index=False)
@@ -82,6 +84,9 @@ for i in range(last_project_index+1,len(projects)):
             f.write(get_project_name()[i]+'\n')
     shutil.rmtree(project_name)
 
+print('Commit Count:', commit_count)
+with open ('commit_count.txt', 'w') as f:
+    f.write(str(commit_count))
 
 # dataframe.to_csv('./out_2.csv')
             
