@@ -1,0 +1,4 @@
+mkirchner/gc
+miao1007/Openwrt-NetKeeper
+libusb/hidapi
+scottcgi/Mojoc

@@ -7,7 +7,7 @@ import checkout
 import diff
 import AST
 import shutil
-import bug_type
+import bug_type_gen
 
 commit_count = 0
 projects = pd.read_csv(sys.argv[1]) #read csv file of projects
@@ -57,7 +57,7 @@ for i in range(last_project_index+1,len(projects)):
         checkout.checkout(repo_path, commit.hash, prev.hash)
         for file_path in modified_files:
             diff_text = diff.git_diff(repo_path, prev.hash, commit.hash, file_path)
-            bug_type = test.predict(diff_text)
+            bug_type = bug_type_gen.predict(diff_text)
             pairs = diff.get_pairs(diff_text)
             for deletion, addition in pairs:
                 line_no_fixed = int(addition.split(',')[0])
