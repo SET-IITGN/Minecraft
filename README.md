@@ -11,8 +11,9 @@ It can be done by executing the following commands:
 ```
 git clone https://github.com/tree-sitter/tree-sitter-c build/tree-sitter-c/
 
-git clone https://github.com/git clone https://github.com/tree-sitter/tree-sitter-java build/tree-sitter-java/
-tree-sitter/tree-sitter-cpp build/tree-sitter-cpp/
+git clone https://github.com/tree-sitter/tree-sitter-java build/tree-sitter-java/
+
+git clone https://github.com/tree-sitter/tree-sitter-cpp build/tree-sitter-cpp/
 
 git clone https://github.com/tree-sitter/tree-sitter-java build/tree-sitter-java/
 
