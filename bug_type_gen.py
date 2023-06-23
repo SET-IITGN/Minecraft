@@ -17,12 +17,16 @@ def parse_files(patch):
         if line.startswith("index") or line.startswith("diff"):
             continue
         if line.startswith("---"):
-            filename_before = line.split(" ", 1)[1][1:]
-            continue
+            try:
+                filename_before = line.split(" ", 1)[1][1:]
+            except:
+                continue
 
         if line.startswith("+++"):
-            filename_after = line.split(" ", 1)[1][1:]
-
+            try:
+                filename_after = line.split(" ", 1)[1][1:]
+            except:
+                continue
             if filename_before == filename_after:
                 accumulator.append(f"<ide><path>{filename_before}")
             else:

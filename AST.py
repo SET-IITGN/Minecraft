@@ -1,6 +1,7 @@
 import ast
 import extract_lines
 from tree_sitter import Language, Parser
+import chardet
 
 Language.build_library(
   # Store the library in the `build` directory
@@ -71,8 +72,14 @@ def traverse_inside_fun(start_line, end_line, source_code):
 
 def extract_function_by_line(file_path, line_number):
     
-    with open(file_path, 'r') as file:
-        source_code = file.readlines()
+    codecs_list = ['utf-8', 'iso-8859-1','utf-16', 'utf-32', 'latin-1', 'cp1252']
+    
+    for codec in codecs_list:
+        try:
+            with open(file_path, 'r', encoding=codec) as file:
+                source_code = file.readlines()
+        except:
+            continue
 
     if file_path.endswith('.py'):
         parser = py_parser
