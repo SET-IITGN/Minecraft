@@ -1,5 +1,6 @@
-pandas
-pydriller
-tree-sitter
-transformers
-torch
+pandas==2.0.2
+pydriller==2.5
+tree-sitter==0.20.1
+transformers==4.30.1
+torch==2.0.1
+chardet==3.0.4
