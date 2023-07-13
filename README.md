@@ -15,8 +15,6 @@ git clone https://github.com/tree-sitter/tree-sitter-java build/tree-sitter-java
 
 git clone https://github.com/tree-sitter/tree-sitter-cpp build/tree-sitter-cpp/
 
-git clone https://github.com/tree-sitter/tree-sitter-java build/tree-sitter-java/
-
 git clone https://github.com/tree-sitter/tree-sitter-python build/tree-sitter-python/
 ```
 
