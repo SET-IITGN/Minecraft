@@ -31,3 +31,6 @@ python3 main.py projects.csv
 
 ```projects.csv``` is composed of all open source repositories of multiple languages like C, C++, Python and Java.
 
+## Extending the dataset
+Dataset can be further extended by including different languages. To add languges refer to [tree-sitter](https://github.com/tree-sitter/py-tree-sitter) library and make the necessary changes in [AST.py](https://github.com/anonymousgn1/Minecraft/blob/main/AST.py).
+
