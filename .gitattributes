@@ -1,0 +1,10 @@
+Datasets/dataset_deskhome_i5_venkatesh.zip filter=lfs diff=lfs merge=lfs -text
+Datasets/dataset_ham2.zip filter=lfs diff=lfs merge=lfs -text
+Datasets/dataset_r5.zip filter=lfs diff=lfs merge=lfs -text
+Datasets/r5.zip filter=lfs diff=lfs merge=lfs -text
+Datasets/dataset_ham1_part1.zip filter=lfs diff=lfs merge=lfs -text
+Datasets/dataset_ham5_part1.zip filter=lfs diff=lfs merge=lfs -text
+Datasets/dataset_hamilton3.zip filter=lfs diff=lfs merge=lfs -text
+Datasets/home_desk.zip filter=lfs diff=lfs merge=lfs -text
+Datasets/red_part1.zip filter=lfs diff=lfs merge=lfs -text
+Datasets/white.zip filter=lfs diff=lfs merge=lfs -text
