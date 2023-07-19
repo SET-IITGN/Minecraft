@@ -2,20 +2,7 @@
 
 First, clone the repository using
 ```
-git clone https://github.com/anonymousgn1/Minecraft.git
-```
-
-Once, the cloning is done, the parsers needs to be cloned in the submodules (only during initial setup).
-
-It can be done by executing the following commands:
-```
-git clone https://github.com/tree-sitter/tree-sitter-c build/tree-sitter-c/
-
-git clone https://github.com/tree-sitter/tree-sitter-java build/tree-sitter-java/
-
-git clone https://github.com/tree-sitter/tree-sitter-cpp build/tree-sitter-cpp/
-
-git clone https://github.com/tree-sitter/tree-sitter-python build/tree-sitter-python/
+git clone --recursive https://github.com/anonymousgn1/Minecraft.git
 ```
 
 Now download the required libraries using:
