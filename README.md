@@ -1,4 +1,4 @@
-## Instructions to generate dataset :
+## Instructions to generate dataset:
 
 First, clone the repository using
 ```
