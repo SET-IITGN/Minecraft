@@ -1,3 +1,6 @@
+## Downloading the dataset:
+The Minecraft dataset can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.8164641)
+
 ## Instructions to generate dataset:
 
 First, clone the repository using
