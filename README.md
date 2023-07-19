@@ -1,3 +1,5 @@
+# Minecraft
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8164641.svg)](https://doi.org/10.5281/zenodo.8164641)
 ## Downloading the dataset:
 The Minecraft dataset can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.8164641).
 
