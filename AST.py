@@ -105,8 +105,3 @@ def extract_function_by_line(file_path, line_number):
     
     
 
-# function_name, function_body = extract_function_by_line_number('/home/saikrishna/Documents/pyVulEvo/ASE/2023/geocoder/geocoder/__init__.py',11)
-# print(function_name)
-# print(function_body)
-#print(extract_function_body('/home/saikrishna/Documents/pyVulEvo/ASE/2023/geocoder/prev/geocoder/__init__.py', 'google'))
-# print(extract_function_by_line('/home/saikrishna/Downloads/__init__.py',31))
