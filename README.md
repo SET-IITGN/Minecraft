@@ -26,3 +26,15 @@ python3 main.py projects.csv
 ## Extending the dataset
 Dataset can be further extended by including different languages. To add languges refer to [tree-sitter](https://github.com/tree-sitter/py-tree-sitter) library and make the necessary changes in [AST.py](https://github.com/anonymousgn1/Minecraft/blob/main/AST.py).
 
+# Citation
+If you use this dataset + tool in your research, please cite our ASE 2023 paper in the format specified below:
+```@INPROCEEDINGS{10298401,
+  author={Avula, Sai Krishna and Vobbilisetti, Venkatesh and Mondal, Shouvick},
+  booktitle={2023 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)}, 
+  title={Minecraft: Automated Mining of Software Bug Fixes with Precise Code Context}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1969-1979},
+  doi={10.1109/ASE56229.2023.00116}}
+```
