@@ -7,7 +7,7 @@ The Minecraft dataset can be downloaded from [Zenodo](https://doi.org/10.5281/ze
 
 First, clone the repository using
 ```
-git clone --recursive https://github.com/anonymousgn1/Minecraft.git
+git clone --recursive https://github.com/SET-IITGN/Minecraft.git
 ```
 
 Now download the required libraries using:
